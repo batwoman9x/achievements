@@ -16,7 +16,7 @@ transactions['Prediction'] = predictions['Prediction']
 threats = transactions[transactions['Prediction'] == True].copy()
 
 # Инициализируем GeoIP2 для определения местоположения
-geoip_db_path = 'GeoLite2-City.mmdb'  # Укажите путь к вашей базе GeoLite2
+geoip_db_path = 'GeoLite2-City.mmdb'  # Путь к базе GeoLite2
 reader = Reader(geoip_db_path)
 
 def get_location(ip):
