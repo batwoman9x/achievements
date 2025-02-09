@@ -5,7 +5,7 @@ from geoip2.database import Reader
 transactions = pd.read_csv('dataset.csv')  # Файл с информацией о транзакциях
 predictions = pd.read_csv('preds.csv', names=["Prediction"])  # Файл с метками True/False
 
-# Проверяем размерность файлов
+# Проверка размерность файлов
 if len(transactions) != len(predictions):
     raise ValueError("Количество записей в файлах 'dataset.csv' и 'dataset_with_cities.csv' не совпадает.")
 
